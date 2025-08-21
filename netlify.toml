@@ -1,0 +1,13 @@
+[build]
+publish = "public"
+[[headers]]
+for = "/*"
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+Access-Control-Allow-Headers = "Content-Type, Authorization, X-API-Version"
+[[redirects]]
+from = "/api/*"
+to = "https://api.livechatinc.com/:splat"
+status = 200
+force = true
